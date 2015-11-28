@@ -1,0 +1,31 @@
+{
+  "name": "1sttimesmoking",
+  "scripts": {
+    "dev": "DATABASE_URL=$(heroku config:get DATABASE_URL) nodemon server.js",
+    "build": "sudo webpack",
+    "webpack": "webpack-dev-server --progress --colors --port 8090",
+    "deploy": "git commit -a -m 'all deploy' && git push heroku webpack-build:master"
+  },
+  "dependencies": {
+    "express": "~4.11.2",
+    "jquery": "^2.1.4",
+    "odometer": "^0.4.7",
+    "path": "^0.12.7",
+    "react": "^0.14.1"
+  },
+  "devDependencies": {
+    "babel-core": "^5.8.33",
+    "babel-loader": "^5.3.3",
+    "css-loader": "^0.21.0",
+    "file-loader": "^0.8.4",
+    "image-webpack-loader": "^1.6.2",
+    "img-loader": "^1.2.0",
+    "indexhtml-webpack-plugin": "^0.1.9",
+    "jsx-loader": "^0.13.2",
+    "strip-loader": "^0.1.0",
+    "style-loader": "^0.13.0",
+    "url-loader": "^0.5.6",
+    "webpack": "^1.12.2",
+    "webpack-dev-server": "^1.12.1"
+  }
+}
